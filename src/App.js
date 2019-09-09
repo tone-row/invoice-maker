@@ -8,7 +8,6 @@ import {
   Form,
   LargeText,
   MediumText,
-  MainText,
   SmallTitle,
   Invoice,
   Grid,
@@ -17,7 +16,6 @@ import {
   Three,
   One,
   Two,
-  Six,
   TotalWrapper,
   SpaceChildren
 } from './styled';
@@ -260,9 +258,9 @@ function App() {
           Add Service
         </button>
 
-        <h3>Conversion</h3>
+        <h2>Conversion</h2>
         <label>
-          Convert{' '}
+          Convert to CAD{' '}
           <input
             type="checkbox"
             checked={convert}

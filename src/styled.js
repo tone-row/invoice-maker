@@ -16,10 +16,60 @@ export const Table = styled.div`
 export const Form = styled.div`
   color: white;
   background: black;
-  padding: 1rem;
+	padding: 1rem;
   @media print {
     display: none;
-  }
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+	h2 {
+		font-size: 2em;
+	}
+
+	input[type="text"], input[type="number"] {
+		background: black;
+		color: white;
+		margin: 0 5px;
+		padding: 10px;
+		border: dashed 1px white;
+		font-size: 1.5em;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	label {
+		display: block;
+		width: 400px;
+		text-align: right;
+		margin-bottom: 10px;
+	}
+
+	li {
+		margin-bottom: 10px;
+		button {
+			width: 395px;
+		}
+	}
+
+	button {
+		background: white;
+		text-transform: uppercase;
+		border-radius: 0;
+		border: none;
+		font-weight: 700;
+		font-size: 1.5em;
+		padding: 11px 10px;
+		cursor: pointer;
+		&:hover {
+			background: blueviolet;
+		}
+	}
+	
 `;
 
 export const LargeText = styled.div`
@@ -47,15 +97,21 @@ export const Invoice = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 100vh;
+	height: 0;
+	overflow: hidden;
+
 	a {
 		color: black;
 		text-decoration: none;
 	}
 
-
 	address {
 		font-style: normal;
+	}
+
+	@media print {
+		
+		height: 100vh;
 	}
 `
 

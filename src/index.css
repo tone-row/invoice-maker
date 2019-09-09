@@ -11,4 +11,5 @@ body {
 
 * {
   font-size: inherit;
+  box-sizing: border-box;
 }
