@@ -105,10 +105,10 @@ function TransferOptions() {
           Payment by transfer:
           <div>
             Account #<br />
-            6774936856
+            {process.env.REACT_APP_ACC_NUMBER}
             <br />
             Routing #<br />
-            062001186
+            {process.env.REACT_APP_ROUTING_NUMBER}
           </div>
         </Two>
 
