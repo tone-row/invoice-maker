@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Details = styled.div`
   > * {
@@ -7,154 +7,153 @@ export const Details = styled.div`
 `;
 
 export const Table = styled.div`
-	width: 100%;
-	border: solid 2pt black;
-	border-width: 2pt 0;
-	padding: 2cm 0;
+  width: 100%;
+  border: solid 2pt black;
+  border-width: 2pt 0;
+  padding: 2cm 0;
 `;
 
 export const Form = styled.div`
   color: white;
   background: black;
-	padding: 1rem;
+  padding: 1rem;
   @media print {
     display: none;
-	}
+  }
 
-	h1 {
-		font-size: 3em;
-	}
-	h2 {
-		font-size: 2em;
-	}
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 
-	input[type="text"], input[type="number"] {
-		background: black;
-		color: white;
-		margin: 0 5px;
-		padding: 10px;
-		border: dashed 1px white;
-		font-size: 1.5em;
-	}
+  input[type="text"],
+  input[type="number"] {
+    background: black;
+    color: white;
+    margin: 0 5px;
+    padding: 10px;
+    border: dashed 1px white;
+    font-size: 1.5em;
+  }
 
-	ul {
-		list-style: none;
-		padding: 0;
-	}
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-	label {
-		display: block;
-		width: 400px;
-		text-align: right;
-		margin-bottom: 10px;
-	}
+  label {
+    display: block;
+    width: 400px;
+    text-align: right;
+    margin-bottom: 10px;
+  }
 
-	li {
-		margin-bottom: 10px;
-		button {
-			width: 395px;
-		}
-	}
+  li {
+    margin-bottom: 10px;
+    button {
+      width: 395px;
+    }
+  }
 
-	button {
-		background: white;
-		text-transform: uppercase;
-		border-radius: 0;
-		border: none;
-		font-weight: 700;
-		font-size: 1.5em;
-		padding: 11px 10px;
-		cursor: pointer;
-		&:hover {
-			background: blueviolet;
-		}
-	}
-	
+  button {
+    background: white;
+    text-transform: uppercase;
+    border-radius: 0;
+    border: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 11px 10px;
+    cursor: pointer;
+    &:hover {
+      background: blueviolet;
+    }
+  }
 `;
 
 export const LargeText = styled.div`
-	font-size: 2em;
-	font-weight: 700;
-`
+  font-size: 2em;
+  font-weight: 700;
+`;
 
 export const MediumText = styled.div`
-	font-size: 1.5em;
-	font-weight: 700;
-`
+  font-size: 1.5em;
+  font-weight: 700;
+`;
 
 export const MainText = styled.div`
-	font-size: 1em;
-`
+  font-size: 1em;
+`;
 
 export const SmallTitle = styled(MainText)`
-	text-transform: uppercase;
-`
+  text-transform: uppercase;
+`;
 
 export const Invoice = styled.div`
-	font-size: 26pt;
-	line-height: 1.3;
-	font-weight: 600;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 0;
-	overflow: hidden;
+  font-size: 12.5pt;
+  line-height: 1.3;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 0;
+  overflow: hidden;
 
-	a {
-		color: black;
-		text-decoration: none;
-	}
+  a {
+    color: black;
+    text-decoration: none;
+  }
 
-	address {
-		font-style: normal;
-	}
+  address {
+    font-style: normal;
+  }
 
-	@media print {
-		
-		height: 100vh;
-	}
-`
+  @media print {
+    height: 100vh;
+  }
+`;
 
 export const Grid = styled.div`
-	display: grid;
-	grid-template-columns: repeat(8, 1fr);
-	grid-column-gap: 1cm;
-`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 1cm;
+`;
 
 export const Six = styled.div`
-	grid-column: span 6;
-`
+  grid-column: span 6;
+`;
 
 export const Half = styled.div`
-	grid-column: span 4;
-`
+  grid-column: span 4;
+`;
 
 export const Three = styled.div`
-	grid-column: span 3;
-`
+  grid-column: span 3;
+`;
 
 export const One = styled.div`
-	grid-column: span 1;
-`
+  grid-column: span 1;
+`;
 
 export const Two = styled.div`
-	grid-column: span 2;
-`
+  grid-column: span 2;
+`;
 
 export const TotalWrapper = styled.div`
-	grid-column: 7 / -1;
-`
+  grid-column: 7 / -1;
+`;
 
 export const ExtraSmallText = styled.div`
-	font-size: .75em;
-`
+  font-size: 0.75em;
+`;
 
 export const SpaceChildren = styled.div`
-	> * {
-		margin-bottom: ${({amt = 1}) => amt}cm;
-		
-		&:last-child{
-			margin-bottom: 0 !important;
-		}
-	}
-`
+  > * {
+    margin-bottom: ${({ amt = 1 }) => amt}cm;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+`;

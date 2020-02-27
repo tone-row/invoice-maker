@@ -1,7 +1,7 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react';
-import axios from 'axios';
-import moment from 'moment';
-import { Helmet } from 'react-helmet';
+import React, { useState, useRef, useCallback, useEffect } from "react";
+import axios from "axios";
+import moment from "moment";
+import { Helmet } from "react-helmet";
 import {
   Details,
   Table,
@@ -18,7 +18,7 @@ import {
   Two,
   TotalWrapper,
   SpaceChildren
-} from './styled';
+} from "./styled";
 
 function ServiceFormBlock({
   updateService,
@@ -32,7 +32,7 @@ function ServiceFormBlock({
   return (
     <>
       <label htmlFor={`name ${index}`}>
-        Service{' '}
+        Service{" "}
         <input
           type="text"
           value={name}
@@ -42,7 +42,7 @@ function ServiceFormBlock({
         />
       </label>
       <label htmlFor={`hours ${index}`}>
-        Hours{' '}
+        Hours{" "}
         <input
           type="number"
           value={hours}
@@ -52,7 +52,7 @@ function ServiceFormBlock({
         />
       </label>
       <label htmlFor={`rate ${index}`}>
-        Rate (USD){' '}
+        Rate (USD){" "}
         <input
           type="number"
           x
@@ -64,9 +64,9 @@ function ServiceFormBlock({
       </label>
       {canDelete && (
         <button
-          type={'button'}
+          type={"button"}
           onClick={() => {
-            if (window.confirm('Are you sure?')) {
+            if (window.confirm("Are you sure?")) {
               deleteService(index);
             }
           }}
@@ -125,7 +125,7 @@ function TransferOptions() {
           the date of invoice.
         </Three>
         <One>
-          <img src={'/smiley.svg'} alt="Smiley" />
+          <img src={"/smiley.svg"} alt="Smiley" />
         </One>
       </Grid>
     </ExtraSmallText>
@@ -134,14 +134,14 @@ function TransferOptions() {
 
 function App() {
   const [services, setServices] = useState([
-    { name: 'Development of heavy-trip.com', hours: 40, rate: 60 }
+    { name: "Development of heavy-trip.com", hours: 40, rate: 60 }
   ]);
   const newServiceName = useRef();
-  const [clientName, setClientName] = useState('HEAVY TRIP');
-  const [clientAddress, setClientAddress] = useState('Montreal, QC, CA');
-  const [clientPhone, setClientPhone] = useState('+1 514-550-0795');
-  const [clientEmail, setClientEmail] = useState('michael@heavy-trip.com');
-  const [convert, setConvert] = useState(true);
+  const [clientName, setClientName] = useState("HEAVY TRIP");
+  const [clientAddress, setClientAddress] = useState("Montreal, QC, CA");
+  const [clientPhone, setClientPhone] = useState("+1 514-550-0795");
+  const [clientEmail, setClientEmail] = useState("michael@heavy-trip.com");
+  const [convert, setConvert] = useState(false);
   const [conversionRate, setConversionRate] = useState(1);
   const [invNumber, setInvNumber] = useState(1);
 
@@ -179,7 +179,7 @@ function App() {
         ...services,
         { name: newServiceName.current.value, hours: 20, rate: 60 }
       ]);
-      newServiceName.current.value = '';
+      newServiceName.current.value = "";
     }
   }, [services, setServices]);
 
@@ -188,16 +188,16 @@ function App() {
     .reduce((a, n) => a + n, 0);
 
   const baseFormatter = useCallback(amt => {
-    return new Intl.NumberFormat('en-US', {
-      currency: 'USD',
-      style: 'currency'
+    return new Intl.NumberFormat("en-US", {
+      currency: "USD",
+      style: "currency"
     }).format(amt);
   }, []);
 
   const conversionFormatter = useCallback(amt => {
-    return new Intl.NumberFormat('en-CA', {
-      currency: 'CAD',
-      style: 'currency'
+    return new Intl.NumberFormat("en-CA", {
+      currency: "CAD",
+      style: "currency"
     }).format(amt);
   }, []);
 
@@ -206,13 +206,13 @@ function App() {
       <Helmet>
         <title>{`Invoice ${invNumber
           .toString()
-          .padStart(5, '0')} — ${clientName}`}</title>
+          .padStart(5, "0")} — ${clientName}`}</title>
       </Helmet>
       <Form>
         <h1>Invoice Maker</h1>
         <h2>Invoice</h2>
         <label htmlFor={`inv number`}>
-          Invoice Number{' '}
+          Invoice Number{" "}
           <input
             type="number"
             value={invNumber}
@@ -221,10 +221,10 @@ function App() {
         </label>
         <h2>Client</h2>
         {[
-          [clientName, setClientName, 'Name'],
-          [clientAddress, setClientAddress, 'Address'],
-          [clientPhone, setClientPhone, 'Phone'],
-          [clientEmail, setClientEmail, 'Email']
+          [clientName, setClientName, "Name"],
+          [clientAddress, setClientAddress, "Address"],
+          [clientPhone, setClientPhone, "Phone"],
+          [clientEmail, setClientEmail, "Email"]
         ].map(([value, setValue, niceName]) => (
           <input
             type="text"
@@ -260,12 +260,12 @@ function App() {
 
         <h2>Conversion</h2>
         <label>
-          Convert to CAD{' '}
+          Convert to CAD{" "}
           <input
             type="checkbox"
             checked={convert}
             onChange={({ target: { checked } }) => setConvert(checked)}
-          />{' '}
+          />{" "}
         </label>
       </Form>
       <Invoice>
@@ -275,10 +275,10 @@ function App() {
           </Half>
           <Half>
             <Actor
-              name={''}
-              address={'2705 Van Dyke Avenue, Raleigh NC 27607'}
-              phone={'+1 929-259-4302'}
-              email={'rob.gordon@tone-row.com'}
+              name={""}
+              address={"2705 Van Dyke Avenue, Raleigh NC 27607"}
+              phone={"+1 929-259-4302"}
+              email={"rob.gordon@tone-row.com"}
             />
           </Half>
         </Grid>
@@ -287,7 +287,7 @@ function App() {
             <SpaceChildren>
               <MediumText>{clientName}</MediumText>
               <Actor
-                name={''}
+                name={""}
                 address={clientAddress}
                 phone={clientPhone}
                 email={clientEmail}
@@ -298,13 +298,13 @@ function App() {
           <Two>
             <SpaceChildren>
               <SmallTitle>Date</SmallTitle>
-              <div>{moment().format('MM/DD/YYYY')}</div>
+              <div>{moment().format("MM/DD/YYYY")}</div>
             </SpaceChildren>
           </Two>
           <Two>
             <SpaceChildren>
               <SmallTitle>Invoice</SmallTitle>
-              <div>{invNumber.toString().padStart(5, '0')}</div>
+              <div>{invNumber.toString().padStart(5, "0")}</div>
             </SpaceChildren>
           </Two>
         </Grid>
@@ -340,7 +340,7 @@ function App() {
           <TotalWrapper>
             <SpaceChildren>
               <SmallTitle>Total</SmallTitle>
-              <MediumText style={{ whiteSpace: 'nowrap' }}>
+              <MediumText style={{ whiteSpace: "nowrap" }}>
                 {baseFormatter(total)}
               </MediumText>
               {convert && (
@@ -350,7 +350,7 @@ function App() {
                   </SmallTitle>
                   <ExtraSmallText>
                     Conversion rate ({conversionRate}), taken from the European
-                    Central Bank on {moment().format('MMMM Do YYYY, h:mm:ss a')}
+                    Central Bank on {moment().format("MMMM Do YYYY, h:mm:ss a")}
                   </ExtraSmallText>
                 </div>
               )}
