@@ -2,5 +2,11 @@
   "env": {
     "REACT_APP_ACC_NUMBER": "@react_app_acc_number",
     "REACT_APP_ROUTING_NUMBER": "@react_app_routing_number"
+  },
+  "build": {
+    "env": {
+      "REACT_APP_ACC_NUMBER": "@react_app_acc_number",
+      "REACT_APP_ROUTING_NUMBER": "@react_app_routing_number"
+    }
   }
 }
