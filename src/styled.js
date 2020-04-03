@@ -14,8 +14,6 @@ export const Table = styled.div`
 `;
 
 export const Form = styled.div`
-  color: white;
-  background: black;
   padding: 1rem;
   @media print {
     display: none;
@@ -30,11 +28,9 @@ export const Form = styled.div`
 
   input[type="text"],
   input[type="number"] {
-    background: black;
-    color: white;
     margin: 0 5px;
     padding: 10px;
-    border: dashed 1px white;
+    border: dashed 1px;
     font-size: 1.5em;
   }
 
@@ -58,7 +54,6 @@ export const Form = styled.div`
   }
 
   button {
-    background: white;
     text-transform: uppercase;
     border-radius: 0;
     border: none;

@@ -133,14 +133,12 @@ function TransferOptions() {
 }
 
 function App() {
-  const [services, setServices] = useState([
-    { name: "Development of heavy-trip.com", hours: 40, rate: 60 }
-  ]);
+  const [services, setServices] = useState([]);
   const newServiceName = useRef();
-  const [clientName, setClientName] = useState("HEAVY TRIP");
-  const [clientAddress, setClientAddress] = useState("Montreal, QC, CA");
-  const [clientPhone, setClientPhone] = useState("+1 514-550-0795");
-  const [clientEmail, setClientEmail] = useState("michael@heavy-trip.com");
+  const [clientName, setClientName] = useState("");
+  const [clientAddress, setClientAddress] = useState("");
+  const [clientPhone, setClientPhone] = useState("");
+  const [clientEmail, setClientEmail] = useState("");
   const [convert, setConvert] = useState(false);
   const [conversionRate, setConversionRate] = useState(1);
   const [invNumber, setInvNumber] = useState(1);
